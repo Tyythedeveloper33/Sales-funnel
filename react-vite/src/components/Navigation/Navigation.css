@@ -1,3 +1,81 @@
-.profile-dropdown {
-  position: absolute;
+/* Navigation.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;  /* Transparent background */
+  color: #000;  /* Set default text color to black */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for contrast */
+}
+
+.navbar-left .brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000; /* Brand text in black */
+  text-transform: uppercase;
+}
+
+.navbar-center ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center li {
+  font-size: 18px;
+}
+
+.navbar-center li a {
+  color: #000; /* Anchor tags in black */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-center li a:hover {
+  color: #3498db; /* Lime Green on hover */
+}
+
+.navbar-right .get-started-btn {
+  padding: 12px 40px;  /* Make the button longer */
+  background-color: #3498db; /* Lime Green background */
+  color: white;  /* Text inside the button is black */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-center {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar-center ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
 }

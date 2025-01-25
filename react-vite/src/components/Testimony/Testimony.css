@@ -1,0 +1,33 @@
+.testimonial-section {
+    height: 200px; /* Adjust to be half the size of the hero section, you can tweak this as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Adds padding only to top and bottom */
+  }
+
+  .testimonial-content {
+    text-align: center;
+    max-width: 800px; /* You can adjust the width to suit your design */
+    width: 100%;
+  }
+
+  .quote-icon {
+    font-size: 4rem;
+    color: #555; /* Adjust this color for the quote symbol */
+    margin-bottom: 10px; /* Reduced margin to bring the quote closer to the text */
+  }
+
+  .testimonial-text {
+    font-size: 1.25rem;
+    color: #333;
+    font-style: italic;
+    margin-top: 0; /* Reduced margin-top to keep the text closer to the quote */
+    margin-bottom: 20px; /* Maintain spacing from name below */
+  }
+
+  .testimonial-name {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+  }

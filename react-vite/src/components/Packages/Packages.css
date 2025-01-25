@@ -1,0 +1,99 @@
+.packages {
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+
+  .packages-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .packages-description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjusted to 3 columns */
+    gap: 20px;
+    justify-items: center; /* Center the grid items */
+    margin-top: 30px; /* Optional: Add space between the grid and top content */
+  }
+
+  .package-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Optional: Set max width for cards */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  .package-card.middle-card {
+    background-color: #f5deb3; /* Soft gold color for the Goldilocks effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow for prominence */
+    transform: scale(1.05); /* Slightly larger size */
+  }
+
+  .package-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .package-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 120px;
+  }
+
+  .package-heading {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  .package-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .package-features li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .Space {
+    margin-left: 8px;
+  }
+
+  .cta-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .book-call-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+  }

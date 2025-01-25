@@ -1,0 +1,28 @@
+.personal-story {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    height: 60vh; /* Slightly taller to accommodate more padding */
+    padding: 8% 10%; /* Increased vertical padding to 8%, keeping horizontal padding at 10% */
+    background-color: transparent; /* Ensure no background color */
+  }
+
+  .story-content {
+    max-width: 50%; /* Keep content width consistent */
+    text-align: left;
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* Match the heading size */
+    margin-bottom: 1rem;
+  }
+
+  .sub-heading {
+    font-size: 1.125rem; /* Match sub-heading size */
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  .highlight {
+    font-weight: bold;
+    color: grey; /* Medium grey for emphasis */
+  }
