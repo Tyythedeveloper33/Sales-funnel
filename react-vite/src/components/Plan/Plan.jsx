@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaHandshake, FaClipboardList, FaDesktop, FaRocket } from 'react-icons/fa'; // Import icons
 import "./Plan.css"
-
+import { NavLink } from 'react-router-dom';
 export default function Plan() {
   return (
     <section className="plan-section">
@@ -31,7 +31,7 @@ export default function Plan() {
           </div>
         </div>
         <div className="cta-button">
-          <button>Start Your Journey</button>
+         <NavLink to="Dashboard"><button>Start Your Journey</button></NavLink>
         </div>
       </div>
     </section>

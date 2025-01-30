@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 import "./Packages.css";
-
+import { NavLink } from "react-router-dom";
 function Packages() {
   return (
     <section className="packages">
@@ -22,7 +22,7 @@ function Packages() {
           <li><FaCheck /><span className="Space">Lead capture forms included</span></li>
           <li><FaCheck /><span className="Space">Easy-to-use CMS</span></li>
         </ul>
-        <button className="cta-button">Get Started</button>
+        <NavLink to="Dashboard"><button className="cta-button">Get Started</button></NavLink>
         <a href="/book-call" className="book-call-link">Book a Call</a>
       </div>
 
@@ -38,7 +38,7 @@ function Packages() {
           <li><FaCheck /><span className="Space">Conversion rate optimization</span></li>
           <li><FaCheck /><span className="Space">Custom analytics dashboard</span></li>
         </ul>
-        <button className="cta-button">Get Started</button>
+        <NavLink to="Dashboard"><button className="cta-button">Get Started</button></NavLink>
         <a href="/book-call" className="book-call-link">Book a Call</a>
       </div>
 
@@ -54,7 +54,7 @@ function Packages() {
           <li><FaCheck /><span className="Space">Monthly reporting</span></li>
           <li><FaCheck /><span className="Space">Priority support</span></li>
         </ul>
-        <button className="cta-button">Get Started</button>
+        <NavLink to="Dashboard"><button className="cta-button">Get Started</button></NavLink>
         <a href="/book-call" className="book-call-link">Book a Call</a>
       </div>
     </div>

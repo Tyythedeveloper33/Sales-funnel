@@ -1,5 +1,5 @@
 import "./HomeHeroSection.css";
-
+import { NavLink } from "react-router-dom";
 function HomeHeroSection() {
   return (
     <section className="hero">
@@ -12,7 +12,7 @@ function HomeHeroSection() {
           build a professional, lead-generating website that grows your business.
         </p>
         <div className="cta-container">
-          <button className="cta-button">Get Started</button>
+          <NavLink to="DashBoard"><button className="cta-button">Get Started</button></NavLink>
         </div>
       </div>
       <div className="hero-image">

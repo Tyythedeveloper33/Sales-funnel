@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <span className="brand">SiteMagnet</span>
+       <NavLink to="/"><span className="brand">SiteMagnet</span></NavLink>
       </div>
       <div className="navbar-center">
         <ul>
@@ -16,7 +16,7 @@ function Navigation() {
         </ul>
       </div>
       <div className="navbar-right">
-        <button className="get-started-btn">Get Started</button>
+        <NavLink to="Dashboard"><button className="get-started-btn">Get Started</button></NavLink>
       </div>
     </nav>
   );

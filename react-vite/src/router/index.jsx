@@ -12,19 +12,38 @@ import Packages from '../components/Packages';
 import PersonalStory from '../components/PersonalStory';
 import FAQ from '../components/FAQ';
 import Reassurance from '../components/Reassurance';
+import Dashboard from '../components/DashBoard';
+import PrivateRoute from '../components/PrivateRoute';
+import AuthFormPage from '../components/AuthFormPage';  // Import PrivateRoute
+
 export const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
         path: "/",
-        element:<><HomeHeroSection/><PastClients/><KeyProblem/>
-        <Testimony/><Plan/><ClientShowcase/><Packages/><PersonalStory/>
-        <FAQ/><Reassurance/></>
+        element: (
+          <>
+            <HomeHeroSection />
+            <PastClients />
+            <KeyProblem />
+            <Testimony />
+            <Plan />
+            <ClientShowcase />
+            <Packages />
+            <PersonalStory />
+            <FAQ />
+            <Reassurance />
+          </>
+        ),
       },
       {
-        path: "login",
-        element: <LoginFormPage />,
+        path: "dashboard", // Changed path to lowercase for consistency
+        element: <PrivateRoute element={<Dashboard />} />, // Protect the dashboard route
+      },
+      {
+        path: "Auth",
+        element: <AuthFormPage />,
       },
       {
         path: "signup",
