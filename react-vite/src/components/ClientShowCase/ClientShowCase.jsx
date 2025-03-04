@@ -37,7 +37,7 @@ function ClientShowcase() {
           {/* Client 5 content */}
         </div>
         <div className="grid-item grid-item-6">
-          <h3>Client 6</h3>
+          <h3 id='pricing'>Client 6</h3>
           {/* Client 6 content */}
         </div>
       </div>

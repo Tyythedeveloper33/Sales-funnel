@@ -31,7 +31,7 @@ export default function Plan() {
           </div>
         </div>
         <div className="cta-button">
-         <NavLink to="Dashboard"><button>Start Your Journey</button></NavLink>
+         <NavLink to="Dashboard"><button id='our-work'>Start Your Journey</button></NavLink>
         </div>
       </div>
     </section>

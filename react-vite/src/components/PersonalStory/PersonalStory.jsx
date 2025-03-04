@@ -17,7 +17,7 @@ function PersonalStory() {
             I went from chasing clients to attracting my first $3,000 client.
           </span>
         </p>
-        <p className="sub-heading">
+        <p className="sub-heading" id="faqs">
           With my background in sales and experience helping businesses thrive, I know how to create websites that don’t just look good—they convert. Anybody can build a website, but I want to create a money-making machine that has clients excited to throw their money at you.
         </p>
       </div>
