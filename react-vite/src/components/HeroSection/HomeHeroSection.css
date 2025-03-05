@@ -31,8 +31,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity if needed */
-  z-index: 0; /* Behind content but above video */
+  background: rgba(0, 0, 0, 0.85); /* Darker overlay with higher opacity */
+  z-index: 5; /* Above the video but below the booking container */
+  display: none; /* Initially hidden */
+}
+
+/* Active Overlay when Booking is Shown */
+.overlay.active {
+  display: block; /* Show overlay when the booking container is active */
 }
 
 /* Hero Content */
@@ -76,6 +82,60 @@
   background: #e64a19;
 }
 
+/* Booking Container Styles */
+.booking-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 1200px;
+  z-index: 10; /* Above the overlay */
+  text-align: center;
+  height: 650px;
+}
+
+.booking-container h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.booking-container p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+ position: relative;
+ bottom: 80px;
+}
+
+/* Close Booking Button */
+.close-booking {
+  background: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1rem;
+  position: relative;
+  bottom: 60px;
+}
+
+.close-booking:hover {
+  background: #e64a19;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
@@ -97,5 +157,27 @@
 
   .hero-content {
     padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* Booking Container on Small Screens */
+  .booking-container {
+    width: 100%;
+    padding: 1rem;
+  }
+ .close-booking{
+  position: absolute;
+bottom: 20px;
+right: 55px;
+width: 90px;
+
+ }
+  .booking-container iframe {
+    height:95%; /* Reduced iframe height for smaller screens */
+    margin-top: 80px;
+
+  }
+  .booking-container{
+    width: 92%;
+    height: 98%;
   }
 }
