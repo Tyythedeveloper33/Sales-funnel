@@ -1,5 +1,5 @@
-import React from 'react'
-import './KeyProblem.css'
+import React from 'react';
+import './KeyProblem.css';
 
 export default function YourSection() {
   return (
@@ -15,5 +15,5 @@ export default function YourSection() {
         </p>
       </div>
     </section>
-  )
+  );
 }

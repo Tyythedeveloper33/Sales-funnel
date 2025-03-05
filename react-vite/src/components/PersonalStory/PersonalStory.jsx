@@ -4,10 +4,12 @@ import "./PersonalStory.css";
 function PersonalStory() {
   return (
     <section className="personal-story">
-      <div className="story-content">
+      <div className="left-side">
         <h2 className="main-heading">
           I’ve Helped Over 2 Clients This Month Achieve Success
         </h2>
+      </div>
+      <div className="right-side">
         <p className="sub-heading">
           I started my design business to escape the 9-5 grind. But soon, I found myself working harder than ever—struggling to find clients and wondering what I was doing wrong while watching others succeed.
         </p>

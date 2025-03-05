@@ -1,79 +1,149 @@
 /* Plan Section Styles */
 .plan-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh; /* Same height as hero section */
-    background-color: #f0f0f0; /* Same grey background as hero */
-    padding: 0 20px; /* Padding for sides */
-    text-align: center; /* Center text horizontally */
-    background-size: cover; /* Ensure the background color spans the entire section */
-    background-position: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Allow section to expand */
+  background-color: #f0f0f0;
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
-  .plan-content {
-    max-width: 900px; /* Increase the width of the content */
-    width: 100%; /* Ensure the content takes up full available width */
-    text-align: center; /* Center the text */
-  }
+.plan-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
 
+.plan-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary-text {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  text-align: center;
+  flex: 1 1 250px; /* Ensures consistent step width */
+  max-width: 280px;
+  margin: 10px;
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* CTA Button */
+.cta-button {
+  margin-top: 20px;
+}
+
+.cta-button button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 250px;
+}
+
+.cta-button button:hover {
+  background-color: #2980b9;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
   .plan-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
   }
 
   .summary-text {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
   }
 
   .steps-container {
-    display: flex;
-    justify-content: space-between; /* Space out the steps horizontally */
-    flex-wrap: wrap; /* Allow the items to wrap for responsiveness */
-    margin-bottom: 40px;
+    justify-content: center;
   }
 
   .step {
-    text-align: center;
-    flex: 1 1 22%; /* Allow items to stretch across the available width */
-    margin: 10px; /* Add spacing between the steps */
+    flex: 1 1 45%; /* Two columns */
+    max-width: 45%;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .plan-content h1 {
+    font-size: 2rem;
   }
 
-  .step-icon {
-    font-size: 3rem; /* Icon size */
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .step h3 {
-    font-size: 1.25rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .step p {
+  .summary-text {
     font-size: 1rem;
-    color: #555;
   }
 
-  .cta-button {
-    margin-top: 20px;
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    flex: 1 1 100%; /* Stack vertically */
+    max-width: 100%;
   }
 
   .cta-button button {
-    padding: 10px 25px;
     font-size: 1rem;
-    background-color:#3498db; /* Button background color */
-    color: white; /* Button text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 200px; /* Keep the CTA button the same size */
-    margin: 0 auto; /* Center the button */
+    padding: 12px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .plan-content h1 {
+    font-size: 1.75rem;
   }
 
-  .cta-button button:hover {
-    background-color: #3498db; /* Darker green when hovered */
+  .summary-text {
+    font-size: 0.9rem;
   }
+
+  .step h3 {
+    font-size: 1.1rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button button {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}

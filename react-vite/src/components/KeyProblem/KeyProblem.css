@@ -1,25 +1,80 @@
 /* YourSection Styles */
 .problem-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 50vh; /* 1/2 of the viewport height */
-    background-color: #f0f0f0; /* Grey background */
-    padding: 10px 0; /* 10px padding for top and bottom */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50vh; /* 1/2 of the viewport height */
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+.content {
+  max-width: 50%; /* Content takes up half of the section */
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Headings and Text */
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .problem-section {
+    justify-content: center; /* Center content on tablets */
+    height: auto;
+    padding: 3rem 1rem;
   }
 
   .content {
-    max-width: 50%; /* Content takes up half of the section */
-    text-align: left;
+    max-width: 70%;
+    text-align: center; /* Center text on tablets */
   }
 
   .main-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
 
   .sub-heading {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    color: #333;
+    font-size: 1rem;
   }
+}
+
+@media (max-width: 768px) {
+  .problem-section {
+    flex-direction: column; /* Stack elements */
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    max-width: 90%;
+    text-align: center; /* Center text on mobile */
+  }
+
+  .main-heading {
+    font-size: 1.8rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .sub-heading {
+    font-size: 0.9rem;
+  }
+}

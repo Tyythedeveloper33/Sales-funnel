@@ -1,31 +1,50 @@
-/* Navigation.css */
-
+/* General Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: white;  /* Transparent background */
-  color: #000;  /* Set default text color to black */
+  background-color: white;
+  color: #000;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for contrast */
 }
+.get-started-btn{
+  margin-left: 70px;
 
+}
+.navbar-center{
+  margin-left: 80px;
+}
+/* Brand Styling */
+/* Brand Styling */
 .navbar-left .brand {
   font-size: 24px;
   font-weight: bold;
-  color: #000; /* Brand text in black */
+  color: #000;
   text-transform: uppercase;
+  text-decoration: none; /* Remove underline */
 }
 
+/* Ensure NavLink inside .brand has no underline */
+.navbar-left .brand a {
+  text-decoration: none !important; /* Prevent any underline */
+}
+
+.brand{
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+/* Center Menu (Desktop) */
 .navbar-center ul {
   display: flex;
   gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 
 .navbar-center li {
@@ -33,19 +52,20 @@
 }
 
 .navbar-center li a {
-  color: #000; /* Anchor tags in black */
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar-center li a:hover {
-  color: #3498db; /* Lime Green on hover */
+  color: #3498db; /* Highlight color on hover */
 }
 
+/* Get Started Button (Desktop) */
 .navbar-right .get-started-btn {
-  padding: 12px 40px;  /* Make the button longer */
-  background-color: #3498db; /* Lime Green background */
-  color: white;  /* Text inside the button is black */
+  padding: 12px 40px;
+  background-color: #3498db; /* Button color */
+  color: white;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -54,28 +74,115 @@
   transition: background-color 0.3s ease;
 }
 
+.navbar-right .get-started-btn:hover {
+  background-color: #2980b9;
+}
 
-
-/* Make it responsive */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Hamburger Menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #000;
+    transition: 0.3s;
+  }
+
+  .hamburger .line.open {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+
+  .hamburger .line.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Hide menu items by default on mobile */
   .navbar-center {
     width: 100%;
     margin-top: 15px;
+    display: none;
+    flex-direction: column;
+    margin-left: 0px;
   }
 
+  .navbar-center.open {
+    display: flex;
+  }
+  .get-started-btn{
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
   .navbar-center ul {
     flex-direction: column;
     gap: 15px;
   }
-
+.brand{
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
   .navbar-right {
     margin-top: 15px;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* On Desktop, ensure the menu is visible and well-aligned */
+@media (min-width: 769px) {
+  .navbar {
+    flex-direction: row;  /* Keep navbar in row for desktop */
+  }
+.get-started-btn{
+  position: relative;
+  bottom: 20px;
+  left: 110px;
+}
+  .navbar-center {
+    display: flex;
+    position: relative;
+   top:18px;/* Display the menu as a horizontal list */
+   right: 50px;
+  }
+
+  .navbar-center ul {
+    flex-direction: row;  /* Align items horizontally */
+  }
+
+  .navbar-center li {
+    font-size: 18px;
+  }
+
+  .navbar-center li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-center li a:hover {
+    color: #3498db;
+  }
+.brand{
+  position: relative;
+  left: 40px;
+  top: 2px;
+}
+  .navbar-right {
+    margin-top: 0;
+    width: auto;
   }
 }
